@@ -1,0 +1,22 @@
+GARA Prototype CDI Validation Results
+
+Baseline:
+- pingall: 0% dropped
+- h1 to h4: 0% packet loss
+- h1 to h5: 0% packet loss
+- h1 nmap h5: host reachable, ports closed
+- h2 nmap h4: host reachable, ports closed
+- h4 to h6: 0% packet loss
+
+GARA-Enforced:
+- OpenFlow rule applied:
+  priority=100, ip, nw_src=10.0.1.0/24, nw_dst=10.0.3.0/24, actions=drop
+
+- h1 to h4: 100% packet loss
+- h1 nmap -Pn h5: filtered/no-response
+- h3 to h4: 0% packet loss
+- h4 to h6: 0% packet loss
+- Drop rule counter: 4003 packets dropped
+
+Interpretation:
+The GARA enforcement rule successfully blocked direct Corporate IT-to-OT traffic while preserving mediated DMZ-to-OT and OT-to-SOC monitoring paths.
