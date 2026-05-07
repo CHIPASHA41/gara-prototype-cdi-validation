@@ -1,0 +1,4 @@
+mininet> mininet> mininet> mininet> mininet> mininet> mininet> mininet> mininet> NXST_FLOW reply (xid=0x4):
+ cookie=0x0, duration=206.212s, table=0, n_packets=2003, n_bytes=116294, idle_age=135, priority=100,ip,nw_src=10.0.1.0/24,nw_dst=10.0.3.0/24 actions=drop
+ cookie=0x0, duration=284.083s, table=0, n_packets=2218, n_bytes=127516, idle_age=0, priority=0 actions=NORMAL
+mininet> 
